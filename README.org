@@ -1,0 +1,16 @@
+#+TITLE: README
+
+This package is an adaptation of [[https://github.com/andrmuel/projectile-git-autofetch][projectile-git-autofetch]] for
+the builtin package project.el. Thus, it is mostly identical.
+If anything, all credit goes to [[https://github.com/andrmuel][Andreas Müller]].
+
+** Installation
+
+With Emacs 30+
+
+#+BEGIN_SRC emacs-lisp
+(use-package project-git-autofetch
+  :ensure t
+  :vc (:url "https://github.com/grolongo/project-git-autofetch"
+       :rev :newest))
+#+END_SRC
