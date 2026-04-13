@@ -1,5 +1,9 @@
 ;;; project-git-autofetch.el --- automatically fetch Git repositories  -*- lexical-binding: t; -*-
 
+;; Author: Andreas Müller, grolongo
+;; URL: https://github.com/grolongo/project-git-autofetch
+;; Version: 0.1.3
+
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
 ;; the Free Software Foundation, either version 3 of the License, or
