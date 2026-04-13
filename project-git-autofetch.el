@@ -176,7 +176,7 @@ An open project is a project with any open buffers."
             (set-process-query-on-exit-flag process nil)
             (set-process-sentinel process #'project-git-autofetch-sentinel)
             (when project-git-autofetch-timeout
-              (add-timeout project-git-autofetch-timeout 'project-git-autofetch-timeout-handler process))))))))
+              (run-with-timer project-git-autofetch-timeout nil #'project-git-autofetch-timeout-handler process))))))))
 
 (defun project-git-autofetch-timeout-handler (process)
   "Timeout handler to kill slow or blocked PROCESS."
