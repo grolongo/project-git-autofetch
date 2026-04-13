@@ -52,9 +52,9 @@ Selection of projects that should be automatically fetched."
   :package-version '(project-git-autofetch . "0.1.0")
   :group 'project-git-autofetch
   :safe (lambda (val) (memq val '(current open all)))
-  :type '(choice (const open    :tag "All open projects.")
-                 (const all     :tag "All known projects.")
-                 (const nil     :tag "Nothing.")))
+  :type '(choice (const :tag "All open projects." open)
+                 (const :tag "All known projects." all)
+                 (const :tag "Nothing." nil)))
 
 (defcustom project-git-autofetch-initial-delay 10
   "Initial delay in seconds before fetching."
