@@ -1,4 +1,4 @@
-;;; project-git-autofetch.el --- automatically fetch git repositories  -*- lexical-binding: t; -*-
+;;; project-git-autofetch.el --- automatically fetch Git repositories  -*- lexical-binding: t; -*-
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -20,7 +20,7 @@
 ;; If anything, all credit goes to Andreas Müller.
 ;; https://github.com/andrmuel/projectile-git-autofetch
 
-;; project-git-autofetch can be used to periodically fetch git
+;; project-git-autofetch can be used to periodically fetch Git
 ;; repositories. Depending on the value of
 ;; project-git-autofetch-projects, all open projects or all projects
 ;; known to project.el are fetched.
@@ -30,12 +30,12 @@
 (require 'project)
 
 (defgroup project-git-autofetch nil
-  "Automatically fetch git repositories."
+  "Automatically fetch Git repositories."
   :group 'tools)
 
 ;;;###autoload
 (define-minor-mode project-git-autofetch-mode
-  "Fetch git repositories periodically."
+  "Fetch Git repositories periodically."
   :init-value nil
   :group 'project-git-autofetch
   :require 'project-git-autofetch
@@ -103,8 +103,8 @@ parameters."
 (defcustom project-git-autofetch-after-successful-fetch-hook nil
   "Hooks to run after sucessfully fetching a repository.
 In contrast to `project-git-autofetch-after-fetch-hook`, these
-hooks only run when new git objects were fetched.
-Note: runs in the git fetch buffer, so you can use project.el
+hooks only run when new Git objects were fetched.
+Note: runs in the Git fetch buffer, so you can use project.el
 functions like `project-root` to determine project
 parameters."
   :group 'project-git-autofetch
@@ -183,7 +183,7 @@ An open project is a project with any open buffers."
   (delete-process process))
 
 (defvar project-git-autofetch-timer nil
-  "Timer object for git fetches.")
+  "Timer object for Git fetches.")
 
 (defun project-git-autofetch-setup ()
   "Set up timers to periodically fetch repositories."
