@@ -9,7 +9,9 @@ to [[https://github.com/andrmuel][Andreas Müller]].
 #+BEGIN_SRC emacs-lisp
 (use-package project-git-autofetch
   :ensure t
-  :vc (:url "https://github.com/grolongo/project-git-autofetch"))
+  :vc (:url "https://github.com/grolongo/project-git-autofetch")
+  :hook (project-git-autofetch-after-successful-fetch . magit-refresh-all) ; not compulsory
+  :config (project-git-autofetch-mode 1))
 #+END_SRC
 
 ** Available customization
@@ -19,8 +21,8 @@ to [[https://github.com/andrmuel][Andreas Müller]].
 | project-git-autofetch-after-fetch-hook            | nil                 | Hooks to run after fetching a repository             |
 | project-git-autofetch-after-successful-fetch-hook | (magit-refresh-all) | Hooks to run after sucessfully fetching a repository |
 | project-git-autofetch-fetch-args                  | ("--no-progress")   | Additional arguments for git fetch                   |
-| project-git-autofetch-initial-delay               | 2                   | Initial delay in seconds before fetching             |
-| project-git-autofetch-interval                    | 15                  | Auto-fetch interval in seconds                       |
+| project-git-autofetch-initial-delay               | 10                  | Initial delay in seconds before fetching             |
+| project-git-autofetch-interval                    | 300                 | Auto-fetch interval in seconds                       |
 | project-git-autofetch-mode                        | t                   | Fetch Git repositories periodically                  |
 | project-git-autofetch-ping-host                   | nil                 | Host to check for Internet connectivity              |
 | project-git-autofetch-process-filter              | nil                 | Optional filter for fetch process                    |
